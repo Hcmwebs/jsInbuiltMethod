@@ -1,0 +1,45 @@
+
+body{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  background-color: #ededed;
+}
+
+
+.grid{
+  width: 610px;
+  height: 610px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #000;
+
+}
+
+
+
+.grid div{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 5px;
+  background-color:#fff;
+}
+
+.playerX{
+background-image: url('img/yoda.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+.playerO {
+  background: url('img/darth.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
