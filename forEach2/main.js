@@ -1,28 +1,32 @@
-const images = ['img/savannaSunset.jpg','img/giantKingFisher.jpg','img/stars.jpg'];
-const img =document.getElementById('img');
+const images = [
+  'img/savannaSunset.jpg',
+  'img/giantKingFisher.jpg',
+  'img/stars.jpg',
+];
+const img = document.getElementById('img');
 let current = 0;
-let timer = 1000;
+let timer = 10000;
 
-//==== change image====
 
-window.addEventListener('DOMContentLoaded', changeImage)
 
-function changeImage() {
-  images.forEach(image => {
-    image
-  })
-}
+window.addEventListener('DOMContentLoaded', () => {
+  //==== change image automatically====
+  const changeImage = () => {
+    setInterval(showNext, timer);
+  };
 
-//==== show next image
+  //==== show next image
+  const showNext = () => {
+    current++;
+    if (current > images.length - 1) {
+      current = 0;
+    }
+    img.src = images[current];
+  };
 
-function showNext(){
-current++;
-if (current > images.length - 1){
-  current = 0;
-}
+  changeImage();
+});
 
-changeImage();
 
-}
+//==== change image manually====
 
-setInterval('showNext', timer )
