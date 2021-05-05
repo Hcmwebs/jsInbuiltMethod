@@ -3,11 +3,10 @@ const images = [
   'img/giantKingFisher.jpg',
   'img/stars.jpg',
 ];
+const btns = document.querySelectorAll('button');
 const img = document.getElementById('img');
 let current = 0;
 let timer = 10000;
-
-
 
 window.addEventListener('DOMContentLoaded', () => {
   //==== change image automatically====
@@ -27,6 +26,10 @@ window.addEventListener('DOMContentLoaded', () => {
   changeImage();
 });
 
-
 //==== change image manually====
 
+btns.forEach(btn => {
+  btn.addEventListener('click', e => {
+    console.log(e);
+  });
+});
